@@ -21,6 +21,13 @@ public class Matricula {
         this.propietario = propietario;
     }
 
+    public Matricula(int Codigo, int yearMatricula, int fechaExpira) {
+        this.Codigo = Codigo;
+        this.yearMatricula = yearMatricula;
+        this.fechaExpira = fechaExpira;
+    }
+
+    
     public Matricula() {
     }
 

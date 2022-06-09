@@ -7,21 +7,29 @@ package modelo;
  */
 public class Propietario {
 
+    private int codigo;
     private String nombre;
     private int edad;
     private String cedula;
-    private String direccion;
     private int celular;
 
-    public Propietario(String nombre, int edad, String cedula, String direccion, int celular) {
+    public Propietario(int codigo, String nombre, int edad, String cedula, int celular) {
+        this.codigo = codigo;
         this.nombre = nombre;
         this.edad = edad;
         this.cedula = cedula;
-        this.direccion = direccion;
         this.celular = celular;
     }
 
     public Propietario() {
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public String getNombre() {
@@ -48,14 +56,6 @@ public class Propietario {
         this.cedula = cedula;
     }
 
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
     public int getCelular() {
         return celular;
     }
@@ -66,9 +66,7 @@ public class Propietario {
 
     @Override
     public String toString() {
-        return "Propietario{" + "nombre=" + nombre + ", edad=" + edad + ", cedula=" + cedula + ", direccion=" + direccion + ", celular=" + celular + '}';
+        return "Propietario{" + "codigo=" + codigo + ", nombre=" + nombre + ", edad=" + edad + ", cedula=" + cedula + ", celular=" + celular + '}';
     }
-    
-    
-    
+ 
 }
