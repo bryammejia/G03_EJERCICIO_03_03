@@ -4,10 +4,19 @@
  */
 package servicio;
 
+import java.util.List;
+import modelo.Matricula;
+
 /**
  *
  * @author USER
  */
 public interface IMatriculaServicio {
+ 
+    public Matricula crear(Matricula matricula);
+    public List<Matricula> listar();
+    public Matricula buscar(int codigo);
+    public Matricula eliminar(int codigo);
+    
     
 }

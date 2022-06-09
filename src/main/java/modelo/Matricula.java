@@ -7,41 +7,44 @@ package modelo;
  */
 public class Matricula {
 
-    private String provincia;
-    private String anioMatricula;
-    private String fechaExpira;
+    private int Codigo;
+    private int yearMatricula;
+    private int fechaExpira;
     private Auto auto;
     private Propietario propietario;
 
-    public Matricula(String provincia, String anioMatricula, String fechaExpira, Auto auto, Propietario propietario) {
-        this.provincia = provincia;
-        this.anioMatricula = anioMatricula;
+    public Matricula(int Codigo, int yearMatricula, int fechaExpira, Auto auto, Propietario propietario) {
+        this.Codigo = Codigo;
+        this.yearMatricula = yearMatricula;
         this.fechaExpira = fechaExpira;
         this.auto = auto;
         this.propietario = propietario;
     }
 
-    public String getProvincia() {
-        return provincia;
+    public Matricula() {
     }
 
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
+    public int getCodigo() {
+        return Codigo;
     }
 
-    public String getAnioMatricula() {
-        return anioMatricula;
+    public void setCodigo(int Codigo) {
+        this.Codigo = Codigo;
     }
 
-    public void setAnioMatricula(String anioMatricula) {
-        this.anioMatricula = anioMatricula;
+    public int getYearMatricula() {
+        return yearMatricula;
     }
 
-    public String getFechaExpira() {
+    public void setYearMatricula(int yearMatricula) {
+        this.yearMatricula = yearMatricula;
+    }
+
+    public int getFechaExpira() {
         return fechaExpira;
     }
 
-    public void setFechaExpira(String fechaExpira) {
+    public void setFechaExpira(int fechaExpira) {
         this.fechaExpira = fechaExpira;
     }
 
@@ -63,9 +66,7 @@ public class Matricula {
 
     @Override
     public String toString() {
-        return "Matricula{" + "provincia=" + provincia + ", anioMatricula=" + anioMatricula + ", fechaExpira=" + fechaExpira + ", auto=" + auto + ", propietario=" + propietario + '}';
+        return "Matricula{" + "Codigo=" + Codigo + ", yearMatricula=" + yearMatricula + ", fechaExpira=" + fechaExpira + ", auto=" + auto + ", propietario=" + propietario + '}';
     }
-    
-    
     
 }
