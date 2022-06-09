@@ -4,10 +4,18 @@
  */
 package servicio;
 
+import java.util.List;
+import modelo.Auto;
+
 /**
  *
  * @author USER
  */
 public interface IAutoServicio {
+    
+    public Auto crear(Auto auto);
+    public List<Auto> listar();
+    public Auto buscarCodigo(int codigo);
+    public Auto eliminar(int codigo);
     
 }
