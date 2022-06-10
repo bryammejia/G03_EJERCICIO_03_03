@@ -10,21 +10,24 @@ public class Matricula {
     private int Codigo;
     private int yearMatricula;
     private int fechaExpira;
+    private String estaMatriculado;
     private Auto auto;
     private Propietario propietario;
 
-    public Matricula(int Codigo, int yearMatricula, int fechaExpira, Auto auto, Propietario propietario) {
+    public Matricula(int Codigo, int yearMatricula, int fechaExpira, String estaMatriculado, Auto auto, Propietario propietario) {
         this.Codigo = Codigo;
         this.yearMatricula = yearMatricula;
         this.fechaExpira = fechaExpira;
+        this.estaMatriculado = estaMatriculado;
         this.auto = auto;
         this.propietario = propietario;
     }
 
-    public Matricula(int Codigo, int yearMatricula, int fechaExpira) {
+    public Matricula(int Codigo, int yearMatricula, int fechaExpira, String estaMatriculado) {
         this.Codigo = Codigo;
         this.yearMatricula = yearMatricula;
         this.fechaExpira = fechaExpira;
+        this.estaMatriculado = estaMatriculado;
     }
 
     
@@ -55,6 +58,14 @@ public class Matricula {
         this.fechaExpira = fechaExpira;
     }
 
+    public String getEstaMatriculado() {
+        return estaMatriculado;
+    }
+
+    public void setEstaMatriculado(String estaMatriculado) {
+        this.estaMatriculado = estaMatriculado;
+    }
+
     public Auto getAuto() {
         return auto;
     }
@@ -73,7 +84,9 @@ public class Matricula {
 
     @Override
     public String toString() {
-        return "Matricula{" + "Codigo=" + Codigo + ", yearMatricula=" + yearMatricula + ", fechaExpira=" + fechaExpira + ", auto=" + auto + ", propietario=" + propietario + '}';
+        return "Matricula{" + "Codigo=" + Codigo + ", yearMatricula=" + yearMatricula + ", fechaExpira=" + fechaExpira + ", estaMatriculado=" + estaMatriculado + ", auto=" + auto + ", propietario=" + propietario + '}';
     }
+
     
+
 }

@@ -22,10 +22,11 @@ public class MatriculaControl {
         var codigoAuto = Integer.valueOf(args[0]);
         var yearMatricula = Integer.valueOf(args [1]);
         var fechaExpira = Integer.valueOf(args [2]);
-        var auto = this.autoServicio.buscarCodigo(Integer.valueOf(args[3]));
-        var persona = this.propietarioServicio.buscar(Integer.valueOf(args[4]));
+        var estaMatriculado = args[4];
+        var auto = this.autoServicio.buscarCodigo(Integer.valueOf(args[4]));
+        var persona = this.propietarioServicio.buscar(Integer.valueOf(args[5]));
         
-        var matricula = new Matricula(codigoAuto,yearMatricula,fechaExpira,auto,persona);
+        var matricula = new Matricula(codigoAuto,yearMatricula,fechaExpira,estaMatriculado,auto,persona);
         this.matriculaServicio.crear(matricula);
         return matricula;
             
